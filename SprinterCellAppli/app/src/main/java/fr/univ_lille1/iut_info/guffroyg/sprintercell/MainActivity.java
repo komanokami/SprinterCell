@@ -42,4 +42,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void doRegister(View view){
+        Intent intent = new Intent(MainActivity.this,Register.class);
+        startActivity(intent);
+
+    }
+
+
 }

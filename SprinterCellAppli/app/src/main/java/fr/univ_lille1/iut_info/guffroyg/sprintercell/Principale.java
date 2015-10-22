@@ -1,24 +1,22 @@
 package fr.univ_lille1.iut_info.guffroyg.sprintercell;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class Login extends AppCompatActivity {
+public class Principale extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_principale);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_principale, menu);
         return true;
     }
 
@@ -35,11 +33,5 @@ public class Login extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void doLog(View view){
-       Intent intent = new Intent(Login.this,ListeProjet.class);
-       startActivity(intent);
-
     }
 }
