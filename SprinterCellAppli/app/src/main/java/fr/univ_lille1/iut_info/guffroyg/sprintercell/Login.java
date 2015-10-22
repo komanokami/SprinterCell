@@ -59,14 +59,14 @@ public class Login extends AppCompatActivity {
         Entity<Member> memberEntity = Entity.entity(member, MediaType.APPLICATION_JSON);
 
         return ClientBuilder.newClient()
-                .target("http://37.59.171.4/v1/login")
+                .target("http://37.59.171.4/v1/memberdb/login")
                 .request()
                 .post(memberEntity)
                 .readEntity(Boolean.class);
     }
 
     public void doLog(View view){
-       Intent intent = new Intent(Login.this,ListeProjet.class);
+       Intent intent = new Intent(Login.this,CreerProjet.class);
        startActivity(intent);
 
     }

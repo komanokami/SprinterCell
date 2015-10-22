@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 public class Register extends AppCompatActivity {
 
@@ -35,6 +36,35 @@ public class Register extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void registerMember(View view){
+        String pseudo = ((EditText)findViewById(R.id.etPseudo)).getText().toString();
+        String email = ((EditText)findViewById(R.id.etEmail)).getText().toString();
+        String password = ((EditText)findViewById(R.id.etPassword)).getText().toString();
+        if(pseudo!=null && email!=null && password!=null){
+            Member m = new Member(pseudo, email, password);
+            if (this.register(m)){
+                doSubmit(view);
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Register Impossible", Toast.LENGTH_LONG).show();
+            }
+        } else{
+            Toast.makeText(getApplicationContext(), "Please fill the form, don't leave any field blank", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    public Boolean register (Member member) {
+        Entity<Member> memberEntity = Entity.entity(member, MediaType.APPLICATION_JSON);
+
+        return ClientBuilder.newClient()
+                .target("http://37.59.171.4/v1/memberdb/login")
+                .request()
+                .post(memberEntity)
+                .readEntity(Boolean.class);
     }
 
     public void doSubmit(View view){
