@@ -9,14 +9,16 @@
     <string name="title_activity_liste_projet">ListeProjet</string>
 
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Current Project</string>
+    <string name="title_section2">Create Project</string>
+    <string name="title_section3">Home</string>
+    <string name="title_section4">Disconnect</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
     <string name="title_activity_creer_projet">CreerProjet</string>
+    <string name="title_activity_liste_project">ListeProject</string>
 
 </resources>

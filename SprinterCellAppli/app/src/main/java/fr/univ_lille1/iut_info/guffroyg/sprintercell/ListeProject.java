@@ -1,24 +1,22 @@
 package fr.univ_lille1.iut_info.guffroyg.sprintercell;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class CreerProjet extends AppCompatActivity {
+public class ListeProject extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_creer_projet);
+        setContentView(R.layout.activity_liste_project);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_creer_projet, menu);
+        getMenuInflater().inflate(R.menu.menu_liste_project, menu);
         return true;
     }
 
@@ -35,11 +33,5 @@ public class CreerProjet extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void  doCreerProjet(View v){
-        Intent intentm = new Intent(CreerProjet.this,Principale.class);
-        startActivity(intentm);
-
     }
 }
