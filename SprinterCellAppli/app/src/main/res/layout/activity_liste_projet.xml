@@ -7,40 +7,7 @@
     <!-- As the main content view, the view below consumes the entire
          space available using match_parent in both dimensions. -->
     <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="You have any project"
-            android:id="@+id/textView2"
-            android:layout_gravity="center_horizontal|top"
-            android:textSize="36dp" />
-
-        <Button
-            android:layout_width="231dp"
-            android:layout_height="wrap_content"
-            android:text="Create Project"
-            android:id="@+id/boutonCreerProjet"
-            android:layout_gravity="center_horizontal|bottom"
-            android:onClick="doCreerProjet" />
-
-        <fragment android:id="@+id/navigation_drawer"
-            android:layout_width="@dimen/navigation_drawer_width" android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:name="fr.univ_lille1.iut_info.guffroyg.sprintercell.NavigationDrawerFragment"
-            tools:layout="@layout/fragment_navigation_drawer" />
-
-        <TextView
-            android:id="@android:id/text1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:minHeight="40sp" />
-    </FrameLayout>
+        android:layout_height="match_parent" />
 
     <!-- android:layout_gravity="start" tells DrawerLayout to treat
          this as a sliding drawer on the left side for left-to-right
@@ -49,6 +16,10 @@
          android:layout_gravity="left" instead. -->
     <!-- The drawer is given a fixed width in dp and extends the full height of
          the container. -->
-
+    <fragment android:id="@+id/navigation_drawer"
+        android:layout_width="@dimen/navigation_drawer_width" android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:name="fr.univ_lille1.iut_info.guffroyg.sprintercell.NavigationDrawerFragment"
+        tools:layout="@layout/fragment_navigation_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

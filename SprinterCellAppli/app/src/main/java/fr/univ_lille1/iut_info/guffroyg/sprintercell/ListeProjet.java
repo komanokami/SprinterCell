@@ -16,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class ListeProjet extends AppCompatActivity
@@ -31,8 +30,6 @@ public class ListeProjet extends AppCompatActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-    private String[] drawerItemsList;
-    private ListView myDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +44,6 @@ public class ListeProjet extends AppCompatActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
-        drawerItemsList = getResources().getStringArray(R.array.items);
-        myDrawer = (ListView) findViewById(R.id.navigation_drawer);
-        myDrawer.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.activity_liste_projet, drawerItemsList));
     }
 
     @Override

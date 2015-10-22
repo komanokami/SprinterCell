@@ -3,4 +3,4 @@
     android:layout_height="match_parent" android:choiceMode="singleChoice"
     android:divider="@android:color/transparent" android:dividerHeight="0dp"
     android:background="#cccc"
-    android:layout_gravity="start"    tools:context="fr.univ_lille1.iut_info.guffroyg.sprintercell.NavigationDrawerFragment" />
+    tools:context="fr.univ_lille1.iut_info.guffroyg.sprintercell.NavigationDrawerFragment" />
