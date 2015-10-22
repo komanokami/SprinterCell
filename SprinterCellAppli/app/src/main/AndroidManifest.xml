@@ -36,6 +36,10 @@
             android:label="@string/title_activity_liste_projet"
             android:theme="@style/Theme.AppCompat" >
         </activity>
+        <activity
+            android:name=".CreerProjet"
+            android:label="@string/title_activity_creer_projet" >
+        </activity>
     </application>
 
 </manifest>
