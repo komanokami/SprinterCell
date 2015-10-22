@@ -1,9 +1,11 @@
 package fr.univ_lille1.iut_info.guffroyg.sprintercell;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class CreerProjet extends AppCompatActivity {
 
@@ -33,5 +35,11 @@ public class CreerProjet extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void  doCreerProjet(View v){
+        Intent intentm = new Intent(CreerProjet.this,Principale.class);
+        startActivity(intentm);
+
     }
 }
