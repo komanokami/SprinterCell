@@ -13,7 +13,7 @@
         android:id="@+id/boutonLog"
         android:layout_below="@+id/etPassword"
         android:layout_marginTop="45dp"
-        android:onClick="doLog"
+        android:onClick="loginMember"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

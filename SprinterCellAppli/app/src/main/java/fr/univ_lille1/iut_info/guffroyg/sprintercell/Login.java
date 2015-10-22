@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
 
@@ -35,6 +36,33 @@ public class Login extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void loginMember(View view){
+        String pseudo = ((EditText)findViewById(R.id.etPseudo)).getText().toString();
+        String password = ((EditText)findViewById(R.id.etPassword)).getText().toString();
+        if(pseudo!=null && password!=null){
+            Member m = new Member(pseudo, null, password);
+            if (this.login(m)){
+                doLog(view);
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Bad Connexion", Toast.LENGTH_LONG).show();
+            }
+        } else{
+            Toast.makeText(getApplicationContext(), "Please fill the form, don't leave any field blank", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    public Boolean login (Member member) {
+        Entity<Member> memberEntity = Entity.entity(member, MediaType.APPLICATION_JSON);
+
+        return ClientBuilder.newClient()
+                .target("http://37.59.171.4/v1/login")
+                .request()
+                .post(memberEntity)
+                .readEntity(Boolean.class);
     }
 
     public void doLog(View view){
